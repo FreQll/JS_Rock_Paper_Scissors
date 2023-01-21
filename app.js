@@ -8,13 +8,14 @@ const game = ()=> {
         const introScreen = document.querySelector('.intro');
         const match = document.querySelector('.match');
         const score = document.querySelector('.score');
-        const restart = document.querySelector('.restart');
+
+        pScore = 0;
+        cScore = 0;
 
         playButton.addEventListener('click', ()=> {
             introScreen.classList.add('fadeOut');
             match.classList.add('fadeIn');
             score.classList.add('fadeIn');
-            //restart.classList.add('fadeIn');
         });
     };
 
@@ -24,6 +25,7 @@ const game = ()=> {
         const playerHand = document.querySelector('.player-hand');
         const computerHand = document.querySelector('.computer-hand');
         const hands = document.querySelectorAll('.hands img');
+        const restart = document.querySelector('.restart');
 
         hands.forEach(hand => {
             hand.addEventListener('animationend', function() {
@@ -33,11 +35,18 @@ const game = ()=> {
         //Computer options
         const computerOptions = ['rock', 'paper', 'scissors'];
 
+        restart.addEventListener('click', () => {
+            startGame();
+            updateScore();
+            restart.classList.remove('fadeIn');
+        });
+
         options.forEach(option =>{
             option.addEventListener("click", function() {
                 //Computer choice
                 const computerNumber = Math.floor(Math.random() * 3); 
                 const computerChoice = computerOptions[computerNumber];
+                const restart = document.querySelector('.restart');
 
                 //animation
                 playerHand.style.animation = "shakePlayer 2s ease";
@@ -48,7 +57,9 @@ const game = ()=> {
 
                     updateScore();
 
+                    console.log(pScore, cScore);
                     if (pScore >= 10 || cScore >= 10) {
+                        console.log(pScore, cScore);
                         restart.classList.add('fadeIn');
                     }
     
@@ -114,11 +125,9 @@ const game = ()=> {
             }
         }
     }
-
     //Inner functions
     startGame();
     playMatch();
 };
 
 game();
-

@@ -58,9 +58,9 @@ section {
 
 .restart {
     position: absolute;
-    top: 85%;
+    top: 10%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -10%);
     transition: opacity 0.5s ease 0.5s;
 }
 
