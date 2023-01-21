@@ -49,6 +49,8 @@ const game = ()=> {
                 const restart = document.querySelector('.restart');
 
                 //animation
+                playerHand.src = 'images/rock.png';
+                computerHand.src = 'images/rock.png';
                 playerHand.style.animation = "shakePlayer 2s ease";
                 computerHand.style.animation = "shakeComputer 2s ease";
 

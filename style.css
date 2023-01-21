@@ -56,6 +56,20 @@ section {
     cursor: pointer;
 }
 
+.intro button:hover,
+.match button:hover, 
+.restart button:hover {
+    background: rgb(34, 85, 70);
+    transition: background 0.3s;
+}
+
+.intro button:active,
+.match button:active, 
+.restart button:active {
+    background: rgb(26, 65, 53);
+    transition: background 0.3s;
+}
+
 .restart {
     position: absolute;
     top: 10%;
