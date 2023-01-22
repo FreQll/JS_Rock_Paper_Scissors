@@ -1,4 +1,6 @@
 # JS_Rock_Paper_Scissors
+
+Simple game written [on the lesson](https://www.youtube.com/@developedbyed)
  
 ![image](https://user-images.githubusercontent.com/62791316/213882051-8a440155-2b4a-4997-b0de-b4b5dea75219.png)
 
