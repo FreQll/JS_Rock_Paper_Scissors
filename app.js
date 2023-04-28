@@ -65,8 +65,8 @@ const game = ()=> {
                         restart.classList.add('fadeIn');
                     }
     
-                    playerHand.src = `/images/${this.textContent}.png`;
-                    computerHand.src = `/images/${computerChoice}.png`;
+                    playerHand.src = `./images/${this.textContent}.png`;
+                    computerHand.src = `./images/${computerChoice}.png`;
                 }, 2000);
             });
         });
